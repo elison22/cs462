@@ -1,13 +1,6 @@
 
 ruleset echo {
 
-  global {
-    hello = function(obj) {
-      msg = "Hello " + obj
-      msg
-    };
- 
-  }
   rule hello {
     select when echo hello
     send_directive("say") with
