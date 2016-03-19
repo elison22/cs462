@@ -9,10 +9,10 @@ ruleset echo {
   rule message{
     select when echo message
     pre{
-    input = event:attr("input").klog("Our passed in input: ");
+      input = event:attr("input");
     }
     send_directive("say") with
-      something = "#{input}"
+      something = "#{input}";
   }
  
 }
