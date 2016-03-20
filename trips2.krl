@@ -26,7 +26,7 @@ ruleset track_trips {
 			}
 			fired{
 				raise explicit event "found_long_trip"
-					if ("#{mileage}").as("num") >= long_trip;
+					if ( ("#{mileage}").as("num") >= long_trip );
 			}
 	}
 
