@@ -10,7 +10,7 @@ ruleset trip_store {
   rule collect_trips {
     select when temp trip_processed
     pre{
-    	mileage = event:attr("mileage").klog("iter 8: ");
+    	mileage = event:attr("mileage").klog("iter 9: ");
     	map_test = ent:mt;
     	testbool = map_test.typeof().klog("Value is #{testbool} and type is ");
     }
