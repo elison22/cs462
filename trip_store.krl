@@ -13,6 +13,7 @@ ruleset trip_store {
     	mileage = event:attr("mileage").klog("iter 2: ");
     	map_test = ent:mt;
     }
+    log ("test log")
     log (map_test.isnull().as("string"))
 
   }
