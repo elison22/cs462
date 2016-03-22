@@ -12,9 +12,8 @@ ruleset trip_store {
     pre{
     	mileage = event:attr("mileage").klog("iter 5: ");
     	map_test = ent:mt;
+    	testbool = map_test.isnull().klog("Test 1");
     }
-    map_test.isnull().klog("Test 1")
-
   }
 
 
