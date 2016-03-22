@@ -1,5 +1,12 @@
 ruleset track_trips {
 
+	meta {
+		name "track_trips"
+		logging on
+		sharing on
+		provides process_trip, find_long_trips, test_long_trip
+	}
+
 	global{
 		long_trip = 100
 	}
@@ -27,8 +34,6 @@ ruleset track_trips {
 			fired{
 				raise explicit event "found_long_trip"
 					if (mileage >= long_trip);
-					//if ( mileage >= long_trip );
-					//if ( event:attr("mileage") >= long_trip);
 			}
 	}
 
