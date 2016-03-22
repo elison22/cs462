@@ -4,7 +4,7 @@ ruleset trip_store {
     name "trip_store"
     logging on
     sharing on
-    provides hello, message
+    provides trip_processed
   }
 
   rule collect_trips {
@@ -13,12 +13,7 @@ ruleset trip_store {
     	mileage = event:attr("mileage");
     	map_test = ent:mt;
     }
-    log("iter1")
-    if (not map_test) then {
-    	log("registered non-existent map")
-    } else {
-    	log("test failed for some reason")
-    }
+    log (not map_test)
 
   }
 
