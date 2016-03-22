@@ -8,7 +8,7 @@ ruleset trip_store {
   }
 
   rule collect_trips {
-    select when explicit trip_processed
+    select when temp trip_processed
     pre{
     	mileage = event:attr("mileage");
     	map_test = ent:mt;
