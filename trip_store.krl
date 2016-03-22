@@ -13,7 +13,7 @@ ruleset trip_store {
     	mileage = event:attr("mileage");
     	map_test = ent:mt;
     }
-    log (not map_test)
+    log (map_test.isnull())
 
   }
 
