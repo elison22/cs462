@@ -32,4 +32,9 @@ ruleset track_trips {
 			}
 	}
 
+	rule test_long_trip {
+		select when explicit found_long_trip
+			noop();
+	}
+
 }
